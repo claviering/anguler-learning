@@ -1,0 +1,19 @@
+<h1 [ngClass]="{
+  'gray': h1Style,
+  'large': !h1Style
+}">Home</h1>
+<h1 [ngStyle]="{
+  'color': h1Style ? 'gray' : 'black',
+  'font-size': h1Style ? '1em' : '4em'
+}">Home</h1>
+<button (click)="firstClick()">Click me</button>
+<div *ngIf="users">
+  <div *ngFor="let user of users">
+    <div [id]="user.name">{{ user.name }}</div>
+    <div [id]="user.age">{{ user.age }}</div>
+  </div>
+</div>
+<mat-radio-group>
+  <mat-radio-button value="1">Option 1</mat-radio-button>
+  <mat-radio-button value="2">Option 2</mat-radio-button>
+</mat-radio-group>
