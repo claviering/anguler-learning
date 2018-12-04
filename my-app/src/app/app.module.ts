@@ -9,7 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSidenavModule, MatRadioModule} from '@angular/material'
+import {DemoMaterialModule} from './material-module';
 
 @NgModule({
   declarations: [
@@ -24,11 +24,10 @@ import { MatSidenavModule, MatRadioModule} from '@angular/material'
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatSidenavModule,
-    MatRadioModule
+    DemoMaterialModule,
   ],
   exports : [
-    MatRadioModule
+    DemoMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

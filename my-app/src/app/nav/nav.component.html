@@ -1,11 +1,10 @@
 <div class="container">
-  <a routerLink="/">{{ appTitle }}</a>
-  <nav>
-    <button mat-button color="warn">Click me!</button>
-    <ul>
-      <li><div routerLink="/" target="_blank" rel="noopener noreferrer">home</div></li>
-      <li><div routerLink="/about" target="_blank" rel="noopener noreferrer">about</div></li>
-      <li><div routerLink="/contact" target="_blank" rel="noopener noreferrer">contact</div></li>
-    </ul>
-  </nav>
+  <div routerLink="/">home</div>
+  <div routerLink="/about">about</div>
+  <div routerLink="/contact">contact</div>
+  <button mat-button color="primary">Primary</button>
+  <button mat-stroked-button>Basic</button>
+  <button mat-stroked-button color="primary">Primary</button>
+  <button mat-stroked-button color="accent">Accent</button>
+  <button mat-stroked-button color="warn">Warn</button>
 </div>
