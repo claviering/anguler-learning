@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private data: DataService) { }
+  message: string = ''
+  infoList: any = []
   ngOnInit() {
+    this.data.currentMessage.subscribe(message => this.message = message)
+    this.data.infoList.subscribe(list => this.infoList = [...this.infoList, ...list])
   }
-
+ß
 }

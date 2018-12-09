@@ -1,19 +1,28 @@
-<h1 [ngClass]="{
-  'gray': h1Style,
-  'large': !h1Style
-}">Home</h1>
-<h1 [ngStyle]="{
-  'color': h1Style ? 'gray' : 'black',
-  'font-size': h1Style ? '1em' : '4em'
-}">Home</h1>
-<button (click)="firstClick()">Click me</button>
-<div *ngIf="users">
-  <div *ngFor="let user of users">
-    <div [id]="user.name">{{ user.name }}</div>
-    <div [id]="user.age">{{ user.age }}</div>
+<form>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="person.name" [ngModelOptions]="{standalone: true}" placeholder="Enter name">
   </div>
-</div>
-<mat-radio-group>
-  <mat-radio-button value="1">Option 1</mat-radio-button>
-  <mat-radio-button value="2">Option 2</mat-radio-button>
-</mat-radio-group>
+  <div class="form-group">
+    <label>E-mail</label>
+    <input type="email" class="form-control" id="name" [(ngModel)]="person.email" [ngModelOptions]="{standalone: true}" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label>Hobby</label>
+    <input type="text" class="form-control" [(ngModel)]="person.hobby" [ngModelOptions]="{standalone: true}" placeholder="hobby">
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" (click)="person.gender = '2'" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+    <label class="form-check-label" for="inlineRadio1">Female</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" (click)="person.gender = '1'" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+    <label class="form-check-label" for="inlineRadio2">Male</label>
+  </div>
+  <div class="mt-2">
+      <textarea class="form-control"></textarea>
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary mt-3" (click)="showPerson()">Submit</button>
+  </div>
+</form>

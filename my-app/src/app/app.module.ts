@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,13 +22,14 @@ import {DemoMaterialModule} from './material-module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     DemoMaterialModule,
   ],
   exports : [
-    DemoMaterialModule
+    DemoMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,17 +9,26 @@ export class HomeComponent implements OnInit {
 
   constructor(private data: DataService) { }
   h1Style: Boolean = false
-  users: Array<Object> = [{
-    name: '1',
-    age: 11
-  },{
-    name: '2',
-    age: 22
-  }]
+  person: any = {
+    name: '',
+    email: '',
+    gender: '',
+    hobby: ''
+  }
+  personList: any[] = []
   ngOnInit() {
     // this.data.getUsers().subscribe(data => {
     //   console.log('data', data);
     // })
+  }
+  newMessage () {
+    this.data.changeMessage('new message')
+  }
+  showPerson () {
+    this.personList.push(this.person)
+    console.log('personList', this.personList);
+    this.person = {}
+    this.data.changeInfoList(this.personList)
   }
   firstClick () {
     console.log('click me')
