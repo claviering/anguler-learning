@@ -1,7 +1,4 @@
-<p>
-  contact works!
-</p>
 <div>{{message}}</div>
 <ul class="list-group">
-  <li class="list-group-item" *ngFor="let info of infoList">name: {{info.name}}email: {{info.email}} Hobby: {{info.hobby}} gender:{{info.gender}}</li>
+  <li (click)="aboutme($event)" [attr.id]="info.name" class="list-group-item" *ngFor="let info of infoList">name: {{info.name}} email: {{info.email}} Hobby: {{info.hobby}} gender:{{info.gender}}</li>
 </ul>

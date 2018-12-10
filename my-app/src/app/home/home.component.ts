@@ -13,10 +13,15 @@ export class HomeComponent implements OnInit {
     name: '',
     email: '',
     gender: '',
-    hobby: ''
+    hobby: '',
+    about: ''
   }
   personList: any[] = []
+  ngOnDestroy () {
+    console.log('ngOnDestroy')
+  }
   ngOnInit() {
+    console.log('ngOnInit');
     // this.data.getUsers().subscribe(data => {
     //   console.log('data', data);
     // })
